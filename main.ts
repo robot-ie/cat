@@ -1,4 +1,5 @@
 namespace cat {
+    //% block
     //% group="Basic"
     export function pressingLeftEar(): boolean {
         const pin0Val = pins.analogReadPin(AnalogPin.P0)
