@@ -22,8 +22,8 @@ namespace cat {
     basic.forever(function () {
         const pin0Val = pins.analogReadPin(AnalogPin.P0)
         const pin1Val = pins.analogReadPin(AnalogPin.P1)
-        rightEarIsPressed = pin0Val >= 10;
-        leftEarIsPressed = pin1Val >= 10;
+        rightEarIsPressed = pin0Val >= 20;
+        leftEarIsPressed = pin1Val >= 20;
     })
 
 
