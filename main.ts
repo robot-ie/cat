@@ -1,9 +1,24 @@
 namespace cat {
-    pins.setAudioPinEnabled(false)
-    pins.setPull(DigitalPin.P0, PinPullMode.PullDown)
-    pins.setPull(DigitalPin.P1, PinPullMode.PullDown)
+   
     let rightEarIsPressed = false
     let leftEarIsPressed = false
+    let strip: neopixel.Strip = null
+    
+    init()
+
+    function init(){
+        pins.setAudioPinEnabled(false)
+        pins.setPull(DigitalPin.P0, PinPullMode.PullDown)
+        pins.setPull(DigitalPin.P1, PinPullMode.PullDown)
+        strip = neopixel.create(DigitalPin.P8, 12, NeoPixelMode.RGB)
+        strip.setBrightness(0)
+        strip.showRainbow(1, 255)
+        strip.show()
+        motor.servo(motor.Servos.S8, 90)
+    }
+
+
+
     basic.forever(function () {
         const pin0Val = pins.analogReadPin(AnalogPin.P0)
         const pin1Val = pins.analogReadPin(AnalogPin.P1)
@@ -79,5 +94,40 @@ namespace cat {
         purring = false
         motor.motorStop(motor.Motors.M3);
     }
+
+
+
+
+
+
+
+
+    let movingTail = false
+    basic.forever(function () {
+        if (movingTail) {
+            motor.servo(motor.Servos.S8,130)
+            basic.pause(1000)
+            motor.servo(motor.Servos.S8, 50)
+            basic.pause(1000)
+        }
+        else {
+            motor.servo(motor.Servos.S8, 90)
+        }
+
+    })
+    //% block
+    //% group="Basic"
+    export function moveTail() {
+        movingTail = true
+
+    }
+
+    //% block
+    //% group="Basic"
+    export function stopTail() {
+        movingTail = false
+        motor.servo(motor.Servos.S8, 90)
+    }
+
 
 }
