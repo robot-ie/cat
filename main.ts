@@ -6,7 +6,7 @@ namespace cat {
         const pin0Val = pins.analogReadPin(AnalogPin.P0)
         const pin1Val = pins.analogReadPin(AnalogPin.P0)
         rightEarIsPressed = pin0Val > 900;
-        leftEarIsPressed = pin0Val > 900;
+        leftEarIsPressed = pin1Val > 900;
     })
 
 
