@@ -1,12 +1,14 @@
 namespace cat {
-
+    pins.setAudioPinEnabled(false)
+    pins.setPull(DigitalPin.P0, PinPullMode.PullDown)
+    pins.setPull(DigitalPin.P1, PinPullMode.PullDown)
     let rightEarIsPressed = false
     let leftEarIsPressed = false
     basic.forever(function () {
         const pin0Val = pins.analogReadPin(AnalogPin.P0)
         const pin1Val = pins.analogReadPin(AnalogPin.P1)
-        rightEarIsPressed = pin0Val > 900;
-        leftEarIsPressed = pin1Val > 900;
+        rightEarIsPressed = pin0Val >= 10;
+        leftEarIsPressed = pin1Val >= 10;
     })
 
 
