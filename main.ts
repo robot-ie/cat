@@ -48,4 +48,18 @@ namespace cat {
         })
 
     }
+
+
+    //% block
+    //% group="Basic"
+    export function purr() {
+        motor.MotorRun(motor.Motors.M3, motor.Dir.CW, 55)
+    }
+
+    //% block
+    //% group="Basic"
+    export function stopPurr() {
+        motor.motorStop(motor.Motors.M3);
+    }
+
 }
