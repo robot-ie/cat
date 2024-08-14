@@ -55,11 +55,11 @@ namespace cat {
             motor.MotorRun(motor.Motors.M3, motor.Dir.CW, 55)
             basic.pause(800)
             motor.motorStop(motor.Motors.M3);
-            basic.pause(400)
-            motor.MotorRun(motor.Motors.M3, motor.Dir.CW, 20)
+            basic.pause(200)
+            motor.MotorRun(motor.Motors.M3, motor.Dir.CW, 30)
             basic.pause(800)
             motor.motorStop(motor.Motors.M3);
-            basic.pause(400)
+            basic.pause(200)
         }
         else{
             motor.motorStop(motor.Motors.M3);
