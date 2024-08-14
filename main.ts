@@ -1,36 +1,27 @@
 namespace cat {
 
-    let rightEarWasPressed = false
-    let numberOfTimeRightEarPressed = 0
+    let rightEarIsPressed = false
     basic.forever(function () {
-        const isPressingRightEarNow = checkIfPressingRightEar()
-        if (isPressingRightEarNow && !rightEarWasPressed){
-            numberOfTimeRightEarPressed = numberOfTimeRightEarPressed +1
-        }
-        rightEarWasPressed = isPressingRightEarNow
-        
+        const pin0Val = pins.analogReadPin(AnalogPin.P0)
+        rightEarIsPressed = pin0Val > 900;
     })
 
-    function checkIfPressingRightEar(): boolean {
-        const pin0Val = pins.analogReadPin(AnalogPin.P0)
-        return pin0Val > 900;
-    }
 
     //% block
     //% group="Basic"
     export function pressingRightEar(): boolean {
-        return rightEarWasPressed;
+        return rightEarIsPressed;
     }
 
     //% block
     //% group="Basic"
     export function onRightEarPressed(handler: () => void) {
-        let lastNumberOfTimesRightEarPressed = numberOfTimeRightEarPressed 
+        let rightEarWasPressed = rightEarIsPressed
         basic.forever(function () {
-            if (numberOfTimeRightEarPressed>lastNumberOfTimesRightEarPressed){
+            if (!rightEarWasPressed && rightEarIsPressed){
                 handler()
             }
-            lastNumberOfTimesRightEarPressed = numberOfTimeRightEarPressed
+            rightEarWasPressed = rightEarIsPressed
         })
         
     }
