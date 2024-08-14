@@ -49,16 +49,34 @@ namespace cat {
 
     }
 
-
+    let purring = false
+    basic.forever(function() {
+        if (purring){
+            motor.MotorRun(motor.Motors.M3, motor.Dir.CW, 55)
+            basic.pause(400)
+            motor.motorStop(motor.Motors.M3);
+            basic.pause(100)
+            motor.MotorRun(motor.Motors.M3, motor.Dir.CW, 30)
+            basic.pause(400)
+            motor.motorStop(motor.Motors.M3);
+            basic.pause(100)
+        }
+        else{
+            motor.motorStop(motor.Motors.M3);
+        }
+        
+    })
     //% block
     //% group="Basic"
     export function purr() {
-        motor.MotorRun(motor.Motors.M3, motor.Dir.CW, 55)
+        purring = true
+
     }
 
     //% block
     //% group="Basic"
     export function stopPurr() {
+        purring = false
         motor.motorStop(motor.Motors.M3);
     }
 
