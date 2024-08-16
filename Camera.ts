@@ -30,29 +30,13 @@ namespace catImp {
             })
         }
 
-        getLocation(): string {
+        getLocation(): number {
             if (!this.objectFound) {
-                return "NF"
+                return 0;
             }
-            if (0 <= this.objectX && this.objectX < 106 && this.objectY < 120) {
-                return "TL"
-            }
-            if (106 <= this.objectX && this.objectX < 213 && this.objectY < 120) {
-                return "TC"
-            }
-            if (213 <= this.objectX && this.objectX <= 320 && this.objectY < 120) {
-                return "TR"
-            }
-            if (0 <= this.objectX && this.objectX < 106 && this.objectY >= 120) {
-                return "BL"
-            }
-            if (106 <= this.objectX && this.objectX < 213 && this.objectY >= 120) {
-                return "BC"
-            }
-            if (213 <= this.objectX && this.objectX <= 320 && this.objectY >= 120) {
-                return "BR"
-            }
-            return "NF"
+            const xSegment = Math.floor(this.objectX / (321 / 3)) + 1
+            const ySegment = Math.floor(this.objectY / (241 / 3)) + 1
+            return xSegment * ySegment;
         }
 
 
