@@ -7,7 +7,9 @@ namespace catImp {
         }
         init() {
             this.strip = neopixel.create(this.pin, 12, NeoPixelMode.RGB)
-            this.strip.setBrightness(0)
+            this.strip.setBrightness(255)
+            this.strip.showColor(0)
+            this.strip.show()
         }
 
 
