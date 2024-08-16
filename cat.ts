@@ -5,6 +5,9 @@ namespace catImp {
         purrMotor: PurrMotor = new PurrMotor(motor.Motors.M3)
         tail: Tail = new Tail(motor.Servos.S8);
         collar: Collar = new Collar(DigitalPin.P8);
+        constructor(){
+
+        }
 
         init() {
             pins.setAudioPinEnabled(false)
