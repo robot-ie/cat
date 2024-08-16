@@ -3,17 +3,18 @@ namespace catImp {
         earIsPressed: boolean = false
         private analogPin:AnalogPin
         private digitalPin:DigitalPin
-        constructor(options:{analogPin: AnalogPin, digitalPin:DigitalPin}){
-            const {analogPin, digitalPin} = options
-            this.analogPin = analogPin
-            this.digitalPin = digitalPin
+        constructor(analogPin: AnalogPin, digitalPin:DigitalPin){
+            this.analogPin = analogPin;
+            this.digitalPin = digitalPin;
         }
         init(){
+            
             pins.setPull(this.digitalPin, PinPullMode.PullDown)
             basic.forever(function () {
-                const pinVal = this.analogPin.analogReadPin(this.pin)
+                const pinVal = pins.analogReadPin(this.pin)
                 this.earIsPressed = pinVal >= 10;
             })
+            
         }
 
 

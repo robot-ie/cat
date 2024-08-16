@@ -1,12 +1,16 @@
 namespace catImp {
     export class Cat {
-        rightEar: Ear = new Ear({ analogPin: AnalogPin.P0, digitalPin: DigitalPin.P0 })
-        leftEar: Ear = new Ear({ analogPin: AnalogPin.P1, digitalPin: DigitalPin.P1 })
-        purrMotor: PurrMotor = new PurrMotor(motor.Motors.M3)
-        tail: Tail = new Tail(motor.Servos.S8);
-        collar: Collar = new Collar(DigitalPin.P8);
+        rightEar: Ear;
+        leftEar: Ear;
+        purrMotor: PurrMotor;
+        tail: Tail;
+        collar: Collar;
         constructor(){
-
+            this.rightEar = new Ear(AnalogPin.P0,  DigitalPin.P0)
+            this.leftEar = new Ear(AnalogPin.P1,DigitalPin.P1 )
+            this.purrMotor = new PurrMotor(motor.Motors.M3)
+            this.tail = new Tail(motor.Servos.S8);
+            this.collar = new Collar(DigitalPin.P8);
         }
 
         init() {
