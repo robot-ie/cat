@@ -72,19 +72,9 @@ namespace cat {
 
     //% block
     //% group="Basic"
-    export function moveForwardSlow() {
-        return cat.legs.moveForwardSlow();
+    export function move(action:catImp.MoveAction) {
+        return cat.legs.move(action);
     }
 
-    //% block
-    //% group="Basic"
-    export function moveLeftSlow() {
-        return cat.legs.moveLeftSlow();
-    }
-    //% block
-    //% group="Basic"
-    export function moveRightSlow() {
-        return cat.legs.moveRightSlow();
-    }
 
 }
