@@ -64,5 +64,11 @@ namespace cat {
         return cat.collar.turnOff()
     }
 
+    //% block
+    //% group="Basic"
+    export function test() :motor.Servos{
+        return motor.Servos.S8
+    }
+
 
 }
