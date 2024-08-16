@@ -19,7 +19,8 @@
         "Tail.ts",
         "Collar.ts",
         "Camera.ts",
-        "Legs.ts"
+        "Legs.ts",
+        "Mouth.ts"
     ],
     "testFiles": [
         "test.ts"

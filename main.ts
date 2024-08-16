@@ -29,6 +29,18 @@ namespace cat {
 
     //% block
     //% group="Basic"
+    export function pressingMouth(): boolean {
+        return cat.mouth.isPressed;
+    }
+
+    //% block
+    //% group="Basic"
+    export function onMouthPressed(handler: () => void) {
+        return cat.mouth.onPressed(handler);
+    }
+
+    //% block
+    //% group="Basic"
     export function purr() {
         cat.purrMotor.vibrate()
 
