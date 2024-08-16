@@ -66,8 +66,8 @@ namespace cat {
 
     //% block
     //% group="Basic"
-    export function test() :motor.Servos{
-        return motor.Servos.S8
+    export function objectLocation() {
+        return cat.camera.getLocation();
     }
 
 

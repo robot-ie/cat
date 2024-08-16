@@ -5,6 +5,7 @@ namespace catImp {
         purrMotor: PurrMotor = new PurrMotor(motor.Motors.M3)
         tail: Tail = new Tail(motor.Servos.S8);
         collar: Collar = new Collar(DigitalPin.P8);
+        camera: Camera = new Camera()
         constructor(){
         }
 
@@ -15,6 +16,7 @@ namespace catImp {
             this.tail.init();
             this.purrMotor.init();
             this.collar.init();
+            this.camera.init();
         }
     }
 }
