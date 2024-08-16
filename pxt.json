@@ -12,7 +12,8 @@
     "files": [
         "main.ts",
         "README.md",
-        "cat.ts"
+        "cat.ts",
+        "husky.ts"
     ],
     "testFiles": [
         "test.ts"
