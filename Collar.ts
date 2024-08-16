@@ -15,6 +15,10 @@ namespace catImp {
             this.strip.showRainbow(1, 255)
             this.strip.show()
         }
+        turnOff() {
+            this.strip.showColor(0)
+            this.strip.show()
+        }
 
     }
 }

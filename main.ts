@@ -58,5 +58,11 @@ namespace cat {
         return cat.collar.showRainbow();
     }
 
+    //% block
+    //% group="Basic"
+    export function turnOffCollar() {
+        return cat.collar.turnOff()
+    }
+
 
 }

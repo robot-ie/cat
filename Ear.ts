@@ -11,7 +11,7 @@ namespace catImp {
             
             pins.setPull(this.digitalPin, PinPullMode.PullDown)
             basic.forever(function () {
-                const pinVal = pins.analogReadPin(this.pin)
+                const pinVal = pins.analogReadPin(this.analogPin)
                 this.earIsPressed = pinVal >= 10;
             })
             
