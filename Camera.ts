@@ -36,7 +36,7 @@ namespace catImp {
             }
             const xSegment = Math.floor(this.objectX / (321 / 3)) + 1
             const ySegment = Math.floor(this.objectY / (241 / 3)) + 1
-            return xSegment * ySegment;
+            return 3 * (ySegment - 1) + xSegment;
         }
 
 
