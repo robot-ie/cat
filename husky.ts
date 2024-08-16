@@ -1,4 +1,5 @@
 // Add your code here
+/*
 motor.MotorRun(motor.Motors.M2, motor.Dir.CW, 250)
 motor.MotorRun(motor.Motors.M1, motor.Dir.CW, 250)
 basic.pause(50)
@@ -65,3 +66,4 @@ basic.forever(function () {
         toyWidth = 0
     }
 })
+*/
