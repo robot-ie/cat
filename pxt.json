@@ -19,7 +19,8 @@
         "PurrMotor.ts",
         "Tail.ts",
         "Collar.ts",
-        "Camera.ts"
+        "Camera.ts",
+        "Legs.ts"
     ],
     "testFiles": [
         "test.ts"

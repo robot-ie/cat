@@ -70,5 +70,21 @@ namespace cat {
         return cat.camera.getLocation();
     }
 
+    //% block
+    //% group="Basic"
+    export function moveForwardSlow() {
+        return cat.legs.moveForwardSlow();
+    }
+
+    //% block
+    //% group="Basic"
+    export function moveLeftSlow() {
+        return cat.legs.moveLeftSlow();
+    }
+    //% block
+    //% group="Basic"
+    export function moveRightSlow() {
+        return cat.legs.moveRightSlow();
+    }
 
 }
