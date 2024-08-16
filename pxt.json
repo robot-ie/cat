@@ -13,7 +13,11 @@
         "main.ts",
         "README.md",
         "cat.ts",
-        "husky.ts"
+        "husky.ts",
+        "Ear.ts",
+        "PurrMotor.ts",
+        "Tail.ts",
+        "Collar.ts"
     ],
     "testFiles": [
         "test.ts"

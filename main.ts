@@ -7,49 +7,55 @@ namespace cat {
     //% block
     //% group="Basic"
     export function pressingRightEar(): boolean {
-        return cat.rightEarIsPressed;
+        return cat.rightEar.earIsPressed;
     }
     //% block
     //% group="Basic"
     export function pressingLeftEar(): boolean {
-        return cat.leftEarIsPressed;
+        return cat.leftEar.earIsPressed;
     }
 
     //% block
     //% group="Basic"
     export function onRightEarPressed(handler: () => void) {
-        return cat.onRightEarPressed(handler);
+        return cat.rightEar.onEarPressed(handler);
     }
 
     //% block
     //% group="Basic"
     export function onLeftEarPressed(handler: () => void) {
-        return cat.onLeftEarPressed(handler);
+        return cat.leftEar.onEarPressed(handler);
     }
 
     //% block
     //% group="Basic"
     export function purr() {
-        cat.purr();
+        cat.purrMotor.vibrate()
 
     }
 
     //% block
     //% group="Basic"
     export function stopPurr() {
-        cat.stopPurr()
+        cat.purrMotor.stop()
     }
     //% block
     //% group="Basic"
     export function moveTail() {
-        return cat.moveTail()
+        return cat.tail.move()
 
     }
 
     //% block
     //% group="Basic"
     export function stopTail() {
-        return cat.stopTail()
+        return cat.tail.stop()
+    }
+
+    //% block
+    //% group="Basic"
+    export function showRainbow() {
+        return cat.collar.showRainbow();
     }
 
 
