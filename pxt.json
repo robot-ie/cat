@@ -11,7 +11,8 @@
     },
     "files": [
         "main.ts",
-        "README.md"
+        "README.md",
+        "cat.ts"
     ],
     "testFiles": [
         "test.ts"
