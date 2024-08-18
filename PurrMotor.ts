@@ -9,11 +9,11 @@ namespace catImp {
             motor.motorStop(this.motor);
             basic.forever(function () {
                 if (this.purring) {
-                    motor.MotorRun(this.motor, motor.Dir.CW, 55)
+                    motor.MotorRun(this.motor, motor.Dir.CW, 45)
                     basic.pause(800)
                     motor.motorStop(this.motor);
                     basic.pause(200)
-                    motor.MotorRun(this.motor, motor.Dir.CW, 30)
+                    motor.MotorRun(this.motor, motor.Dir.CW, 20)
                     basic.pause(800)
                     motor.motorStop(this.motor);
                     basic.pause(200)

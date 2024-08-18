@@ -17,6 +17,10 @@ namespace catImp {
             this.strip.showRainbow(1, 255)
             this.strip.show()
         }
+        rotateLights(){
+            this.strip.rotate(1)
+            this.strip.show();
+        }
         turnOff() {
             this.strip.showColor(0)
             this.strip.show()
