@@ -72,6 +72,12 @@ namespace cat {
 
     //% block
     //% group="Basic"
+    export function rotateLights() {
+        return cat.collar.rotateLights();
+    }
+
+    //% block
+    //% group="Basic"
     export function turnOffCollar() {
         return cat.collar.turnOff()
     }

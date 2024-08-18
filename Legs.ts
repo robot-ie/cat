@@ -25,8 +25,8 @@ namespace catImp {
                     motor.MotorRun(motor.Motors.M1, motor.Dir.CW, 250)
                     break;
                 case MoveAction.ForwardSlow:
-                    motor.MotorRun(motor.Motors.M2, motor.Dir.CW, 250)
-                    motor.MotorRun(motor.Motors.M1, motor.Dir.CW, 250)
+                    motor.MotorRun(motor.Motors.M2, motor.Dir.CW, 200)
+                    motor.MotorRun(motor.Motors.M1, motor.Dir.CW, 200)
                     basic.pause(50)
                     motor.motorStop(motor.Motors.M1)
                     motor.motorStop(motor.Motors.M2)
@@ -37,8 +37,8 @@ namespace catImp {
                     motor.MotorRun(motor.Motors.M1, motor.Dir.CCW, 250)
                     break;
                 case MoveAction.BackwardsSlow:
-                    motor.MotorRun(motor.Motors.M2, motor.Dir.CCW, 250)
-                    motor.MotorRun(motor.Motors.M1, motor.Dir.CCW, 250)
+                    motor.MotorRun(motor.Motors.M2, motor.Dir.CCW, 200)
+                    motor.MotorRun(motor.Motors.M1, motor.Dir.CCW, 200)
                     basic.pause(50)
                     motor.motorStop(motor.Motors.M1)
                     motor.motorStop(motor.Motors.M2)
