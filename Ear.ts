@@ -13,6 +13,9 @@ namespace catImp {
             basic.forever(function () {
                 const pinVal = pins.analogReadPin(this.analogPin)
                 this.earIsPressed = pinVal >= 10;
+                if (this.earIsPressed){
+                    basic.pause(4000)
+                }
             })
             
         }
